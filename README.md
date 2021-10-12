@@ -16,7 +16,8 @@ To quickly run the game without setting up the project, please use the jar file 
 
 
 ## Heads up 
-Libgdx is probably overkill for a game/simulation this simple. I still went with to learn basic game dev concepts.
+* Libgdx is probably overkill for a game/simulation this simple. I still went with to learn basic game dev concepts.
+* The "Fast" mode might make some computers lag/crash
 
 ## Credits
 Some assets were taken from here: https://opengameart.org/content/boardgame-pack
