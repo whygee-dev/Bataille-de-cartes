@@ -95,6 +95,11 @@ public class GameScreen implements Screen {
                 Integer.toString(game.getJ2().getNombreDeCartes()),
                 camera.viewportWidth / 2 + cardJ2.width / 2 + 52.5f,
                 camera.viewportHeight / 2 - 50);
+
+        font.draw(stage.getBatch(),
+                "Awaiting bataille: " + awaitingBataille.size(),
+                camera.viewportWidth / 2 - 58,
+                camera.viewportHeight / 2 - 65);
         
         if (TimeUtils.timeSinceNanos(startTime) > Math.max(2000000000 - speed * 1000000000, 5000000) && !ended) {
             playRound();

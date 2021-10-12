@@ -6,7 +6,7 @@ import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 
 
 public class DesktopLauncher {
-	public static void main (String[] args) throws Exception{
+	public static void main (String[] args){
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		config.title = "Bataille de cartes";
 		config.addIcon("icon-128x128.png", Files.FileType.Internal);
@@ -16,7 +16,15 @@ public class DesktopLauncher {
 		Joueur j1 = new Joueur(nombreDeCarte / 2, "Joueur 1");
 		Joueur j2 = new Joueur(nombreDeCarte / 2, "Joueur 2");
 
-		Carte[] cartes = GameLogic.init(nombreDeCarte);
+		Carte[] cartes;
+
+		try {
+			cartes = GameLogic.init(nombreDeCarte);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			return;
+		}
 
 		GameLogic.attribuerCartes(j1, j2, cartes);
 
